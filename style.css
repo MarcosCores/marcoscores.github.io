@@ -381,18 +381,18 @@ body {
     max-width: 100%;
 }
 
-/* Estilo para as imagens dos projetos */
 .projeto img {
-    width: 100%;
+    width: auto;
     max-width: 380px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    height: 300px;
     border: 2px solid #0b0044; 
     border-radius: 25px;
     box-shadow: 0 6px 20px rgb(4, 26, 1);
+    transition: transform 0.3s ease;
+    display: block;           
+    margin: 0 auto;           
 }
+
 
 /* Estilo para o link de cada projeto */
 .projeto a {
@@ -666,3 +666,7 @@ body {
         flex-wrap: wrap;
     }
 }
+
+
+
+
