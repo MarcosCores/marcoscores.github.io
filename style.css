@@ -578,3 +578,54 @@ body {
 .destaque a:hover {
     background-color: #1c0581;
 }
+/* Telas entre 600px e 1024px (tablets e pequenos notebooks) */
+    @media (min-width: 601px) and (max-width: 1024px) {
+    header .menu-desktop ul {
+    flex-wrap: wrap;
+    gap: 25px;
+    }
+
+    .certificados-img {
+    justify-content: flex-start;
+    }
+
+    .imagem-container {
+    width: 250px;
+    height: 250px;
+    }
+
+    .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+    .softskills {
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projeto {
+    grid-template-columns: 1fr;
+    text-align: center;
+    }
+
+    .projeto img {
+    margin: 0 auto;
+    }
+}
+
+  /* Ajuste fino para imagens responsivas */
+    img {
+    max-width: 100%;
+    height: auto;
+}
+
+  /* Centralização geral para mobile */
+    @media (max-width: 768px) {
+    .footer-links {
+    flex-direction: column;
+    gap: 10px;
+    }
+
+    .footer p {
+    font-size: 0.9rem;
+    }
+}
