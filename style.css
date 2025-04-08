@@ -84,17 +84,6 @@ header .menu-desktop ul li a:hover {
     margin: 0 auto;  
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .topo-do-site h1 {
-        font-size: 36px; 
-    }
-
-    .topo-do-site p {
-        font-size: 16px; 
-        padding: 0 20px;  
-    }
-}
 
 
 /* Seção de Certificados */
@@ -148,12 +137,7 @@ header .menu-desktop ul li a:hover {
     transform: scale(1.05);      
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .certificados-img img {
-        height: 120px;  
-    }
-}
+
 
 
 /* Seção de Hard Skills */
@@ -217,17 +201,7 @@ header .menu-desktop ul li a:hover {
     line-height: 1.5;
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    #hardskills h2 {
-        font-size: 30px;
-    }
 
-    .skills-container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-    }
-}
 
 /* Estilo para a seção de imagem */
 .minha-imagem {
@@ -332,19 +306,7 @@ header .menu-desktop ul li a:hover {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsividade: Ajuste para 2 colunas em telas menores */
-@media (max-width: 1024px) {
-    .softskills {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-/* Responsividade: Ajuste para 1 coluna em telas muito pequenas */
-@media (max-width: 768px) {
-    .softskills {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* Estilo para o fundo da página */
 body {
@@ -450,11 +412,6 @@ body {
     background-color: #07b624;
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .meus-projetos {
-        width: 90%;
-    }
 
     .projeto {
         grid-template-columns: 1fr; /* Em telas pequenas, tudo fica em uma única coluna */
@@ -469,7 +426,7 @@ body {
     .projeto img {
         max-width: 100%; /* A imagem ocupa 100% da largura disponível */
     }
-}
+
 
 .footer {
     background-color: #1b1b1b;
@@ -578,54 +535,134 @@ body {
 .destaque a:hover {
     background-color: #1c0581;
 }
-/* Telas entre 600px e 1024px (tablets e pequenos notebooks) */
-    @media (min-width: 601px) and (max-width: 1024px) {
+
+/* ========== RESPONSIVIDADE ========== */
+
+/* Telas menores que 600px - Smartphones */
+@media (max-width: 600px) {
+
     header .menu-desktop ul {
-    flex-wrap: wrap;
-    gap: 25px;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
 
-    .certificados-img {
-    justify-content: flex-start;
+    header .menu-desktop ul li {
+        margin: 10px 0;
+    }
+
+    .topo-do-site {
+        padding: 40px 5%;
+    }
+
+    .topo-do-site h1 {
+        font-size: 28px;
+    }
+
+    .topo-do-site p {
+        font-size: 14px;
+    }
+
+    .minha-imagem {
+        flex-direction: column;
+        padding: 40px 0;
     }
 
     .imagem-container {
-    width: 250px;
-    height: 250px;
+        width: 200px;
+        height: 200px;
     }
 
-    .skills-container {
-    grid-template-columns: repeat(2, 1fr);
-    }
-
+    .skills-container,
     .softskills {
-    grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+    }
+
+    .soft-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .soft-item p {
+        font-size: 1rem;
     }
 
     .projeto {
-    grid-template-columns: 1fr;
-    text-align: center;
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 15px;
     }
 
     .projeto img {
-    margin: 0 auto;
+        margin: 0 auto;
+        max-width: 100%;
     }
-}
 
-  /* Ajuste fino para imagens responsivas */
-    img {
-    max-width: 100%;
-    height: auto;
-}
-
-  /* Centralização geral para mobile */
-    @media (max-width: 768px) {
     .footer-links {
-    flex-direction: column;
-    gap: 10px;
+        flex-direction: column;
+        gap: 10px;
     }
 
     .footer p {
-    font-size: 0.9rem;
+        font-size: 0.85rem;
+    }
+
+    .certificados-img img {
+        height: 200px;
+    }
+
+    .destaque img {
+        max-width: 100%;
+    }
+}
+
+/* Telas entre 601px e 1024px - Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    header .menu-desktop ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .topo-do-site {
+        padding: 60px 4%;
+    }
+
+    .topo-do-site h1 {
+        font-size: 36px;
+    }
+
+    .imagem-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .softskills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projeto {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .projeto img {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .certificados-img img {
+        height: 250px;
+    }
+
+    .footer-links {
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
     }
 }
